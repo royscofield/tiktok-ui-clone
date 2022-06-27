@@ -16,6 +16,7 @@ import { Wrapper as PopperWrapper } from '../../../Popper';
 import Button from '../../../Button';
 import AccountItem from '../../../AccountItem';
 import Menu from '../../../Popper/Menu/index';
+import Image from '../../../Image';
 import {
     MessageIcon,
     InboxIcon,
@@ -163,18 +164,12 @@ function Header() {
                         </>
                     ) : (
                         <>
-                            <Button
-                                text
-                                leftIcon={<FontAwesomeIcon icon={faPlus} />}
-                            >
-                                Upload
-                            </Button>
                             <Button primary>Log in</Button>
                         </>
                     )}
                     <Menu items={currentUser ? currentUserMenu : MENU_ITEMS}>
                         {currentUser ? (
-                            <img
+                            <Image
                                 className={cx('current-user-logo')}
                                 src="https://scontent.xx.fbcdn.net/v/t1.15752-9/281833212_750298806154393_8865792997063012852_n.jpg?stp=dst-jpg_p403x403&_nc_cat=101&ccb=1-7&_nc_sid=aee45a&_nc_ohc=Z_uED0owxXwAX9Mybga&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&oh=03_AVLFU8bkq5V5wX-AER6xU0t8Y6-e_FBWBJ0UQ4c3ornLYg&oe=62C4FCC1"
                                 alt="cao hoang thien"
