@@ -102,10 +102,36 @@
     color: rgba(22, 24, 35, 0.5);
 }
 
+.actions {
+    display: flex;
+    align-items: center;
+}
+
 .more-btn {
     font-size: 2rem;
     margin-left: 28px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.icon {
+    display: block;
+    background: transparent;
+    padding: 3px 3px 0 ;
+    cursor: pointer;
+    margin-left: 1.6rem;
+}
+
+.custom-icon-login {
+    font-size: 2.2rem;
+}
+
+.current-user-logo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 2.4rem;
     cursor: pointer;
 }

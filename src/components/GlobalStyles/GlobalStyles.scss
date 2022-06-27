@@ -42,3 +42,18 @@ a[href] {
     color: var(--text-color);
     text-decoration: none;
 }
+
+body {
+    .tippy-content {
+        background-color: rgba(84, 84, 84, 0.92);
+        color: rgb(255, 255, 255);
+        border-radius: 0.8rem;
+        font-size: 1.6rem;
+        line-height: 22px;
+        font-weight: 600;
+        padding: 8px;
+    }
+    .tippy-arrow {
+        color: rgba(84, 84, 84, 0.92);
+    }
+}
