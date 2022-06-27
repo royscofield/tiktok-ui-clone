@@ -39,8 +39,7 @@
         background-color: transparent;
     }
     ::placeholder {
-        font-family: 'Josefin Sans', sans-serif;
-        font-family: 'Ubuntu', sans-serif;
+        font-family: 'Proxima';
     }
 
     input:not(:placeholder-shown) ~ .search-btn {

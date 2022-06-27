@@ -1,23 +1,11 @@
 import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faArrowRightFromBracket,
-    faCircleQuestion,
     faCircleXmark,
-    faCoins,
-    faEarthAsia,
     faEllipsisVertical,
-    faGear,
-    faKeyboard,
-    faMagnifyingGlass,
     faPlus,
     faSpinner,
 } from '@fortawesome/free-solid-svg-icons';
-import {
-    faPaperPlane,
-    faMessage,
-    faUser,
-} from '@fortawesome/free-regular-svg-icons';
 import Tippy from '@tippyjs/react';
 import HeadlessTippy from '@tippyjs/react/headless';
 import 'tippy.js/dist/tippy.css';
@@ -28,13 +16,25 @@ import { Wrapper as PopperWrapper } from '../../../Popper';
 import Button from '../../../Button';
 import AccountItem from '../../../AccountItem';
 import Menu from '../../../Popper/Menu/index';
+import {
+    MessageIcon,
+    InboxIcon,
+    SearchIcon,
+    ProfileIcon,
+    CoinIcon,
+    SettingIcon,
+    LanguageIcon,
+    FeedbackIcon,
+    KeyboardIcon,
+    LogoutIcon,
+} from '../../../Icons/index';
 import { useEffect, useState } from 'react';
 
 const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        icon: <LanguageIcon />,
         title: 'English',
         children: {
             title: 'Language',
@@ -51,35 +51,35 @@ const MENU_ITEMS = [
         },
     },
     {
-        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        icon: <FeedbackIcon />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        icon: <KeyboardIcon />,
         title: 'Keyboard shortcuts',
     },
 ];
 
 const currentUserMenu = [
     {
-        icon: <FontAwesomeIcon icon={faUser} />,
+        icon: <ProfileIcon />,
         title: 'View profile',
         to: '/cht',
     },
     {
-        icon: <FontAwesomeIcon icon={faCoins} />,
+        icon: <CoinIcon />,
         title: 'Get coins',
         to: '/coin',
     },
     {
-        icon: <FontAwesomeIcon icon={faGear} />,
+        icon: <SettingIcon />,
         title: 'Settings',
         to: '/setting',
     },
     ...MENU_ITEMS,
     {
-        icon: <FontAwesomeIcon icon={faArrowRightFromBracket} />,
+        icon: <LogoutIcon />,
         title: 'Log out',
         separate: true,
     },
@@ -132,7 +132,7 @@ function Header() {
                         />
                         {/* loading ... */}
                         <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faMagnifyingGlass} />
+                            <SearchIcon />
                         </button>
                     </div>
                 </HeadlessTippy>
@@ -148,10 +148,7 @@ function Header() {
                                 placement="bottom"
                             >
                                 <button className={cx('icon')}>
-                                    <FontAwesomeIcon
-                                        className={cx('custom-icon-login')}
-                                        icon={faPaperPlane}
-                                    />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                             <Tippy
@@ -160,10 +157,7 @@ function Header() {
                                 placement="bottom"
                             >
                                 <button className={cx('icon')}>
-                                    <FontAwesomeIcon
-                                        className={cx('custom-icon-login')}
-                                        icon={faMessage}
-                                    />
+                                    <InboxIcon />
                                 </button>
                             </Tippy>
                         </>
