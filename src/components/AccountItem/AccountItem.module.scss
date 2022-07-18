@@ -1,5 +1,5 @@
 .wrapper {
-    display: flex;
+    display: inline-block;
     align-items: center;
     padding: 6px 16px;
     cursor: pointer;
@@ -14,19 +14,22 @@
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    display: flex;
 }
 
 .info {
-    flex: 1;
+    display: flex;
     margin-left: 12px;
 }
 
 .name {
+    display: flex;
     font-size: 1.6rem;
     font-weight: 500;
 }
 
 .check {
+    display: flex;
     margin-left: 6px;
     color: rgb(32, 213, 236);
 }

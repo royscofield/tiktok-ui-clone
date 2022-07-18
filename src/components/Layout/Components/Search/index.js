@@ -1,27 +1,28 @@
 import classNames from 'classnames/bind';
 import styles from './Search.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCircleXmark, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 import HeadlessTippy from '@tippyjs/react/headless';
 import { Wrapper as PopperWrapper } from '../../../Popper';
 import AccountItem from '../../../AccountItem';
 import { SearchIcon } from '../../../Icons/index';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useRef } from 'react';
+import Data from '../Search/Data.json';
 
 const cx = classNames.bind(styles);
 
 function Search() {
-    const [searchResult, setSearchResult] = useState([]);
+    const [searchResult, setSearchResult] = useState([Data]);
     const [searchValue, setSearchValue] = useState('');
     const [showResult, setShowResult] = useState(false);
 
-    const searchRef = useRef();
+    const searchRef = useRef(); 
 
-    useEffect(() => {
-        setTimeout(() => {
-            setSearchResult([1, 2, 3]);
-        }, 0);
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setSearchResult([1, 2, 3]);
+    //     }, 0);
+    // }, []);
 
     const handleHideResult = () => {
         setShowResult(false);
@@ -32,6 +33,7 @@ function Search() {
         setSearchResult([]);
         searchRef.current.focus();
     };
+
     return (
         <HeadlessTippy
             interactive
@@ -40,9 +42,6 @@ function Search() {
                 <div className={cx('search-result')} tabIndex="-1" {...attrs}>
                     <PopperWrapper>
                         <h4 className={cx('search-title')}>Accounts</h4>
-                        <AccountItem />
-                        <AccountItem />
-                        <AccountItem />
                         <AccountItem />
                     </PopperWrapper>
                 </div>

@@ -2,16 +2,7 @@ import classNames from 'classnames/bind';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEllipsisVertical, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
-
 import 'tippy.js/dist/tippy.css';
-
-import styles from './Header.module.scss';
-import images from '../../../../assets/images/index';
-
-import Button from '../../../Button';
-import Menu from '../../../Popper/Menu/index';
-import Image from '../../../Image';
-import '../Search/index';
 import {
     MessageIcon,
     InboxIcon,
@@ -23,6 +14,12 @@ import {
     KeyboardIcon,
     LogoutIcon,
 } from '../../../Icons/index';
+import styles from './Header.module.scss';
+import images from '../../../../assets/images/index';
+import Button from '../../../Button';
+import Menu from '../../../Popper/Menu/index';
+import Image from '../../../Image';
+import '../Search/index';
 import Search from '../Search/index';
 
 const cx = classNames.bind(styles);
@@ -86,7 +83,9 @@ function Header() {
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="TikTok" />
+                <a href="/">
+                    <img src={images.logo} alt="TikTok" />
+                </a>
 
                 <Search />
 
